@@ -15,11 +15,9 @@
          FCC Metric/Imp Converter
       </h1>
     </header>
-    
-    
       <hr style='margin: 50px'>
     <div id='testui' style='margin-left: 5%'>
-      <h2 style="text-align: left">Front-End:</h2>
+      <h3 style="text-align: left">Enter input</h3>
       <form id="convertForm" class="border">
         <input type="text" id="convertField" name="input" placeholder="3.1mi" style="width: 200px">
         <input id="convert" type="submit" value='Convert!'>
@@ -51,22 +49,22 @@
     
     <div id='userstories' style='margin-left: 5%; margin-top: 5%'>
       <h3>User Stories</h3>
-      <ol>
-        <span class="odd">I will help prevent the client from trying to guess(sniff) the MIME type.</span>
-        <span class="even">I will prevent cross-site scripting (XSS) attacks.</span>
-        <span class="odd">I can <b>GET</b> <code>/api/convert</code> with a single parameter containing an accepted number and unit and have it converted.</span>
-        <span class="even">Hint: Split the input by looking for the index of the first character.</span>
-        <span class="odd">I can convert 'gal' to 'L' and vice versa. <b>(1 gal to 3.78541 L)</b></span>
-        <span class="even">I can convert 'lbs' to 'kg' and vice versa. <b>(1 lbs to 0.453592 kg)</b></span> 
-        <span class="odd">I can convert 'mi' to 'km' and vice versa. <b>(1 mi to 1.60934 km)</b></span>
-        <span class="even">If my unit of measurement is invalid, returned will be 'invalid unit'.</span>
-        <span class="odd">If my number is invalid, returned with will 'invalid number'.</span>
-        <span class="even">If both are invalid, return will be 'invalid number and unit'.</span>
-        <span class="odd">I can use fractions, decimals or both in my parameter(ie. 5, 1/2, 2.5/6), but if nothing is provided it will default to 1.</span>
-        <span class="even">My return will consist of the initNum, initUnit, returnNum, returnUnit, and string spelling out units in format <code>{initNum} {initial_Units} converts to {returnNum} {return_Units}</code> with the result rounded to 5 decimals.</span>
-        <span class="odd">All 16 unit tests are complete and passing.</span>
-        <span class="even">All 5 functional tests are complete and passing.</span>
-      </ol>
+      <ul>
+        <li class="odd">I will help prevent the client from trying to guess(sniff) the MIME type.</li>
+        <li class="even">I will prevent cross-site scripting (XSS) attacks.</li>
+        <li class="odd">I can <b>GET</b> <code>/api/convert</code> with a single parameter containing an accepted number and unit and have it converted.</li>
+        <li class="even">Hint: Split the input by looking for the index of the first character.</li>
+        <li class="odd">I can convert 'gal' to 'L' and vice versa. <b>(1 gal to 3.78541 L)</b></li>
+        <li class="even">I can convert 'lbs' to 'kg' and vice versa. <b>(1 lbs to 0.453592 kg)</b></li> 
+        <li class="odd">I can convert 'mi' to 'km' and vice versa. <b>(1 mi to 1.60934 km)</b></li>
+        <li class="even">If my unit of measurement is invalid, returned will be 'invalid unit'.</li>
+        <li class="odd">If my number is invalid, returned with will 'invalid number'.</li>
+        <li class="even">If both are invalid, return will be 'invalid number and unit'.</li>
+        <li class="odd">I can use fractions, decimals or both in my parameter(ie. 5, 1/2, 2.5/6), but if nothing is provided it will default to 1.</li>
+        <li class="even">My return will consist of the initNum, initUnit, returnNum, returnUnit, and string spelling out units in format <code>{initNum} {initial_Units} converts to {returnNum} {return_Units}</code> with the result rounded to 5 decimals.</li>
+        <li class="odd">All 16 unit tests are complete and passing.</li>
+        <li class="even">All 5 functional tests are complete and passing.</li>
+      </ul>
       <h3>Example usage:</h3>
       <code>/api/convert?input=4gal</code><br>
       <code>/api/convert?input=1/2km</code><br>

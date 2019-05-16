@@ -5,7 +5,6 @@ body {
 	font-size: 16px;
 	color: #222;
 	background-color: #FaFaFa;
-	text-align: center;
 	line-height: 1.4em;
 }
 
@@ -14,12 +13,14 @@ body {
 	margin-top: 40px;
 }
 
-h3 {
+h1 {
   margin-top: 30px;
+  text-align: center;
 }
 
 .footer {
 	margin-top: 40px;
+  text-align: center;
 }
 
 .user-stories {
@@ -34,9 +35,7 @@ code {
   color: black;
   background-color: #fff;
 }
-ol {
-	list-style-position: outside;
-}
+
 ul {
 	list-style-type: none;
 }
@@ -53,8 +52,8 @@ a {
 }
 
 .odd{
-   color:red;
+   color:#ff66a3;
 }
 .even{
-  color:green;
+  color:#009900;
 }
