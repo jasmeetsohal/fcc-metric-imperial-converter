@@ -17,17 +17,18 @@ module.exports = function (app) {
 
   app.route('/api/convert')
     .get(function (req, res){
-    console.log("from api",req.query.input);
       var input = req.query.input;
       var initNum = convertHandler.getNum(input);
+      input = input.split(/\d+\.?\d+\/?\d+|\d+\/?\d+|\d+\.?\d+|\d/);
+      input = input.length == 1 ? input[0]:input[1];
       var initUnit = convertHandler.getUnit(input);
+      if(initUnit != false){
       var returnNum = convertHandler.convert(initNum, initUnit);
       var returnUnit = convertHandler.getReturnUnit(initUnit);
-      console.log("rlsls :",initNum,initUnit,returnNum,returnUnit);
-      //var toString = convertHandler.getString(initNum, initUnit, returnNum, returnUnit);
+      var toString = convertHandler.getString(initNum, initUnit, returnNum, returnUnit);
       res.json(toString);  
-    //console.log(toString);
-      //res.json
+      }
+     res.json({error:'Invalid Input'});
     });
     
 };
